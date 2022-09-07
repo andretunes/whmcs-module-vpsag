@@ -1,0 +1,38 @@
+name: Bug Report
+description: Something isn't working quite right.
+labels: [not confirmed]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Bug reports should only be used for reporting issues with how the module works. For help configuring this module, please use my [Discord server](https://www.andrezzz.pt/discord).
+
+- type: textarea      
+  attributes:
+    label: Current Behavior
+    description: Please provide a clear & concise description of the issue.
+  validations:
+    required: true
+
+- type: textarea      
+  attributes:
+    label: Expected Behavior
+    description: Please describe what you expected to happen.
+  validations:
+    required: true
+
+- type: textarea      
+  attributes:
+    label: Steps to Reproduce
+    description: Please be as detailed as possible when providing steps to reproduce, failure to provide steps will result in this issue being closed.
+  validations:
+    required: true
+
+- type: input
+  id: whmcs-version
+  attributes:
+    label: WHMCS Version
+    description: Version number of your WHMCS (latest is not a version)
+    placeholder: 8.2.1
+  validations:
+    required: true

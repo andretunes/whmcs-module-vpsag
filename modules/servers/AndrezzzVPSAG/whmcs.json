@@ -1,0 +1,27 @@
+{
+    "schema": "1.0",
+    "type": "whmcs-servers",
+    "name": "AndrezzzVPSAG",
+    "license": "MIT",
+    "category": "provisioning",
+    "description": {
+        "name": "Andrezzz - VPSAG",
+        "tagline": "Start selling VPSAG Services automatically!"
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https:\/\/www.andrezzz.pt\/",
+        "learn_more": "https:\/\/www.andrezzz.pt\/",
+        "email": "andreantunes@andrezzz.pt",
+        "support_url": "https:\/\/github.com\/andretunes\/whmcs-module-VPSAG\/issues",
+        "docs_url": "https:\/\/github.com\/andretunes\/whmcs-module-VPSAG\/"
+    },
+    "authors": [
+        {
+            "name": "Andrezzz",
+            "homepage": "https:\/\/www.andrezzz.pt\/"
+        }
+    ]
+}
