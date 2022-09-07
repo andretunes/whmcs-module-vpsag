@@ -656,7 +656,7 @@ function AndrezzzVPSAG_DeliverFile(array $params) {
     try {
         $dir = __DIR__ . '/template/';
         $file = App::getFromRequest('file');
-        $files = array('app.min.css', 'app.js');
+        $files = array('app.min.css', 'app.min.js');
 
         if (in_array($file, $files)) {
             $type = '';
