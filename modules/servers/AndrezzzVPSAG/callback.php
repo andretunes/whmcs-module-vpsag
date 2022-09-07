@@ -17,6 +17,8 @@ require_once ROOTDIR . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . '
 
 use WHMCS\Database\Capsule;
 
+$_POST = array_map('html_entity_decode', $_POST);
+
 $customField = Capsule::table('tblcustomfieldsvalues')->where('value', 'VPSAG-' . $_POST['server_id'])->first();
 $service = WHMCS\Service\Service::find($customField->relid);
 
