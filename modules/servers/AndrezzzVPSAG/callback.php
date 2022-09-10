@@ -64,7 +64,7 @@ Capsule::table('tblhosting')->where('id', $service->id)->update(array(
     'username' => $_POST['username'],
     'password' => encrypt($_POST['root']),
     'dedicatedip' => $mainIP,
-    'assignedips' => (!array_shift($_POST['ips']) ?: implode('\n', $_POST['ips'])) . '\n' . $_POST['ipv6'],
+    'assignedips' => (!array_shift($_POST['ips']) ? $_POST['ipv6'] : implode('\n', $_POST['ips']) . '\n' . $_POST['ipv6']),
 ));
 
 echo '*ok*';
