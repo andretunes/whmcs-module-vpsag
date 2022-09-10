@@ -432,7 +432,7 @@ function AndrezzzVPSAG_ConfigOptions() {
                 $array['extra' . $upgrade['id']]['FriendlyName'] .= ' (' . $upgrade['price'] . '€)';
             }
         }
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
 
         $error['error']['Description'] = 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
@@ -481,7 +481,7 @@ function AndrezzzVPSAG_TestConnection(array $params) {
     try {
         $params['action'] = 'Balance';
         AndrezzzVPSAG_API($params);
-    } catch(Exception $e) {
+    } catch (Exception $e) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $e);
         $err = 'Received the error: ' . $e->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -500,7 +500,7 @@ function AndrezzzVPSAG_CreateAccount(array $params) {
         $params['model']->serviceProperties->save([
             'vpsag|VPSAG ID' => 'VPSAG-' . $create['vps_id'],
         ]);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -512,7 +512,7 @@ function AndrezzzVPSAG_SuspendAccount(array $params) {
     try {
         $params['action'] = 'Disable';
         AndrezzzVPSAG_API($params);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -524,7 +524,7 @@ function AndrezzzVPSAG_UnsuspendAccount(array $params) {
     try {
         $params['action'] = 'Enable';
         AndrezzzVPSAG_API($params);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -542,7 +542,7 @@ function AndrezzzVPSAG_TerminateAccount(array $params) {
             'username' => '',
             'password' => '',
         ));
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -554,7 +554,7 @@ function AndrezzzVPSAG_TerminateAccount(array $params) {
 //     try {
 //         $params['action'] = 'ChangePassword';
 //         AndrezzzVPSAG_API($params);
-//     } catch(Exception $err) {
+//     } catch (Exception $err) {
 //         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
 //         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
 //     }
@@ -566,7 +566,7 @@ function AndrezzzVPSAG_ChangePackage(array $params) {
     try {
         $params['action'] = 'Upgrade';
         AndrezzzVPSAG_API($params);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -577,7 +577,7 @@ function AndrezzzVPSAG_ChangePackage(array $params) {
 function AndrezzzVPSAG_Start(array $params) {
     try {
         AndrezzzVPSAG_API($params);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -588,7 +588,7 @@ function AndrezzzVPSAG_Start(array $params) {
 function AndrezzzVPSAG_Reboot(array $params) {
     try {
         AndrezzzVPSAG_API($params);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -599,7 +599,7 @@ function AndrezzzVPSAG_Reboot(array $params) {
 function AndrezzzVPSAG_Stop(array $params) {
     try {
         AndrezzzVPSAG_API($params);
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
@@ -615,7 +615,7 @@ function AndrezzzVPSAG_VNC(array $params) {
         echo '<style>body{margin: 0px;}</style><iframe src="' . $vnc['vnc_url'] . '" scrolling="none" height="100%" width="100%" frameborder="0"></iframe>';
         // header('Location: ' . $vnc['vnc_url']);
         WHMCS\Terminus::getInstance()->doExit();
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
 
         return array(
@@ -646,7 +646,7 @@ function AndrezzzVPSAG_ClientAreaAPI(array $params) {
         } else {
             throw new Exception('Action not found');
         }
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return array('jsonResponse' => array('result' => 'error', 'message' => $err->getMessage()));
     }
@@ -683,7 +683,7 @@ function AndrezzzVPSAG_DeliverFile(array $params) {
         } else {
             throw new Exception('File not found');
         }
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return array('jsonResponse' => array('result' => 'error', 'message' => $err->getMessage()));
     }
@@ -823,7 +823,7 @@ function AndrezzzVPSAG_AdminLink(array $params) {
         $discount = AndrezzzVPSAG_API($params);
 
         return '<i class="fa fa-coins"></i> Balance: ' . $balance['balance'] . '€<br><i class="fa fa-badge-percent"></i> Discount: ' . $discount['percent'] . '%';
-    } catch(Exception $err) {
+    } catch (Exception $err) {
         AndrezzzVPSAG_Error(__FUNCTION__, $params, $err);
         return 'Received the error: ' . $err->getMessage() . ' Check module debug log for more detailed error.';
     }
