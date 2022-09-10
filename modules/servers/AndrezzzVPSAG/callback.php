@@ -48,7 +48,7 @@ $params = array(
 );
 AndrezzzVPSAG_API($params);
 
-if (gettype($_POST['ips']) !== 'array') $_POST['ips'] = json_decode($_POST['ips']);
+if (gettype($_POST['ips']) !== 'array') $_POST['ips'] = json_decode($_POST['ips'], true);
 
 $_POST['ips'] = array_map(function ($ip) {
     return $ip['ip'];
