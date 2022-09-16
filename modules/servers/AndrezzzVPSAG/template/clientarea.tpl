@@ -416,6 +416,6 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.stack.js" integrity="sha256-gRm10Sf18onxwOSIySMzR9kjmjQK1ejfhrDWdercOfU=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery.flot.tooltip@0.9.0/js/jquery.flot.tooltip.min.js" integrity="sha256-/hmSLSOMElnhoZ3FFQzHrF+BQWFGJBYmk2WYUX3dASc=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js" integrity="sha256-qxQs7IPMvfbL9ZXhsZ3tG/LuZSjNxPSTBNtzk4j5FiU=" crossorigin="anonymous"></script>
-        <script src="{$WEB_ROOT}/clientarea.php?action=productdetails&id={$serviceid}&modop=custom&a=DeliverFile&file=app.js"></script>
+        <script src="{$WEB_ROOT}/clientarea.php?action=productdetails&id={$serviceid}&modop=custom&a=DeliverFile&file=app.min.js"></script>
     </body>
 </html>
