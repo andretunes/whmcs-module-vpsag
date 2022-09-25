@@ -6,16 +6,11 @@ Start selling VPSAG services with this module!
 
 # Screenshots
 ![Overview](Screenshots/Overview.gif)
-![Firewall](Screenshots/Firewall.gif)
 ![Backups](Screenshots/Backups.png)
-![Backups](Screenshots/Backups%20(1).png)
-![rDNS](Screenshots/rDNS.png)
+![VNC](Screenshots/VNC.png)
 
 # Install
-1. Upload the `modules` folder to your WHMCS Installation;
-2. Go to `System Settings -> Servers` and add a new Server, on the Module field choose `Andrezzz - VPSAG` and fill with all the data;
-3. Click on `Test connection` button. If you get any error, please recheck the data entered, if not you can save the Server;
-4. Go to `System Settings -> Products/Services` and create a new Product, on the Module field choose `Andrezzz - VPSAG` and save the Product.
+Please check here: [https://docs.andrezzz.pt/whmcs/servers/vpsag](https://docs.andrezzz.pt/whmcs/servers/vpsag)
 
 # Contact information
 [Website](https://www.andrezzz.pt)<br>
