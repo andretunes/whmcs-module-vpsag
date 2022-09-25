@@ -1,5 +1,5 @@
 # WHMCS Server Provisioning - [VPSAG](https://www.vpsag.com/)
-Below you'll find out how can you install and configure this WHMCS Server Module. If you have any question or problem, I will be at your disposal to configure it remotely.
+Below you'll find how to install and configure this WHMCS Server Module. If you have any questions or problems, I will be at your disposal to configure it remotely.
 
 ## Description
 Start selling VPSAG services with this module!
