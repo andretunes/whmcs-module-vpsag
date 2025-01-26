@@ -34,7 +34,7 @@ foreach ($_POST as $key => $value) {
     $rawSig .= $value;
 }
 
-$rawSig .= decrypt($server->password);
+$rawSig .= hash('sha512', decrypt($server->password));
 $signature = hash('sha256', $rawSig);
 
 if ($_POST['sig'] != $signature) exit(header('Location: https://www.andrezzz.pt'));
